@@ -2,7 +2,7 @@
 
 A sleek, high-performance web application for competitive programmers using the Codeforces API to track progress, analyze performance, and get personalized practice recommendations.
 
-![CodeForge Banner](https://via.placeholder.com/1200x600/0a0a0a/ffffff?text=CodeForge+Dashboard)
+![CodeForge Banner](./screenshots/banner.png)
 
 ## Features
 
@@ -35,8 +35,8 @@ A sleek, high-performance web application for competitive programmers using the 
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/codeforge.git
-cd codeforge
+git clone https://github.com/Krrish2004/CodeForge.git
+cd CodeForge
 
 # Install dependencies
 npm install
@@ -73,12 +73,19 @@ For more details on this feature, see [FEATURES.md](./FEATURES.md).
 
 ## Screenshots
 
-<div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-  <img src="https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Dashboard" alt="Dashboard" width="400" />
-  <img src="https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Problem+Analytics" alt="Problem Analytics" width="400" />
-  <img src="https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Contest+Tracker" alt="Contest Tracker" width="400" />
-  <img src="https://via.placeholder.com/400x250/0a0a0a/ffffff?text=Submission+Details" alt="Submission Details" width="400" />
+<div align="center">
+  <img src="./screenshots/dashboard.png" alt="Dashboard" width="45%" />
+  &nbsp;&nbsp;
+  <img src="./screenshots/problem-analytics.png" alt="Problem Analytics" width="45%" />
+  <br/><br/>
+  <img src="./screenshots/contest-tracker.png" alt="Contest Tracker" width="45%" />
+  &nbsp;&nbsp;
+  <img src="./screenshots/submission-details.png" alt="Submission Details" width="45%" />
 </div>
+
+## Live Demo
+
+You can view the live demo of the application at: [https://code-forge-omega.vercel.app](https://code-forge-omega.vercel.app)
 
 ## License
 
