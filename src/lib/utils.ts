@@ -37,6 +37,34 @@ export function getTimeAgo(timestamp: number): string {
   return `${Math.floor(diff / 31536000)} years ago`;
 }
 
+export function formatTimeAgo(date: Date | number): string {
+  const now = new Date();
+  const past = typeof date === 'number' ? new Date(date * 1000) : date;
+  const diffMs = now.getTime() - past.getTime();
+  
+  // Convert to seconds, minutes, hours, days
+  const diffSec = Math.floor(diffMs / 1000);
+  const diffMin = Math.floor(diffSec / 60);
+  const diffHrs = Math.floor(diffMin / 60);
+  const diffDays = Math.floor(diffHrs / 24);
+  const diffMonths = Math.floor(diffDays / 30);
+  const diffYears = Math.floor(diffDays / 365);
+  
+  if (diffSec < 60) {
+    return `${diffSec} second${diffSec !== 1 ? 's' : ''} ago`;
+  } else if (diffMin < 60) {
+    return `${diffMin} minute${diffMin !== 1 ? 's' : ''} ago`;
+  } else if (diffHrs < 24) {
+    return `${diffHrs} hour${diffHrs !== 1 ? 's' : ''} ago`;
+  } else if (diffDays < 30) {
+    return `${diffDays} day${diffDays !== 1 ? 's' : ''} ago`;
+  } else if (diffMonths < 12) {
+    return `${diffMonths} month${diffMonths !== 1 ? 's' : ''} ago`;
+  } else {
+    return `${diffYears} year${diffYears !== 1 ? 's' : ''} ago`;
+  }
+}
+
 // Codeforces API authentication
 export function generateCodeforcesApiSignature(
   methodName: string,
